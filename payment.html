@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Payment</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    a {
+      color: #fa0065;
+      font-weight: 700;
+      transition-duration: .2s;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+    }
+  </style>
+</head>
+
+<body class="container">
+  <header>
+    <h1>Payment information</h1>
+  </header>
+  <section>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form data-payment-info="form">
+          <!-- Name on card-->
+          <div class="form-group">
+            <label for="name">Name on card
+              <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <select name="title" class="form-control">
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Ms">Ms</option>
+            </select>
+            <input type="text" id="name" name="name" class="form-control" autofocus>
+          </div>
+
+          <!--User Email-->
+          <div class="form-group">
+            <label for="emailInput">Email</label>
+            <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="dr@who.com">
+          </div>
+
+          <!--User Password-->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" value="">
+          </div>
+
+          <!--Card type-->
+          <div class="form-group">
+            <label for="card">Card type</label>
+            <select id="card" name="usercard" class="form-control">
+              <option value="visa">Visa</option>
+              <option value="mc">Mastercard</option>
+              <option value="amex">American Express</option>
+            </select>
+          </div>
+
+          <!--Card number-->
+          <div class="form-group">
+            <label for="number">Card number
+              <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="text" id="number" name="cardnumber" class="form-control" placeholder="xxxx-xxxx-xxxx-xxxx">
+          </div>
+
+          <!--Expiration date-->
+          <div class="form-group">
+            <label for="date">
+                <span>Expiration date</span>
+                <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="text" id="date" name="expiration" class="form-control" placeholder="mm/yy">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="reset" class="btn btn-default">Reset</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal HTML embedded directly into document -->
+    <div data-payment-confirm="overlay">
+    </div>
+    <!--<div id="overlay" class="modal">
+      <div data-payment-confirm="overlay">
+      </div>
+      <p>Thanks for clicking. That felt good.</p>
+      <a href="#" rel="modal:close">Close</a>
+    </div>-->
+
+    <!-- Link to open the modal -->
+    <!--<p><a href="#overlay" rel="modal:open">Open Modal</a></p>-->
+  </section>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+
+  <!-- Include jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+  <!-- jQuery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+  <script type="text/javascript" src="scripts/paymenthandler.js" charset="utf-8"></script>
+  <script type="text/javascript" src="scripts/payment.js" charset="utf-8"></script>
+</body>
+
+</html>
