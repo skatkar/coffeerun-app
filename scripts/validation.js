@@ -4,7 +4,7 @@
 
   var Validation = {
     isCompanyEmail : function(email){
-      return /.+@csu\.fullerton\.edu$/.test(email);
+      return /.+@testing\.com$/.test(email);
     }
   };
 
