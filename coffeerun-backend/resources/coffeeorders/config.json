@@ -1,0 +1,37 @@
+{
+	"type": "Collection",
+	"properties": {
+		"emailAddress": {
+			"name": "emailAddress",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "emailAddress",
+			"order": 0
+		},
+		"strength": {
+			"name": "strength",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "strength",
+			"order": 1
+		},
+		"flavor": {
+			"name": "flavor",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "flavor",
+			"order": 2
+		},
+		"size": {
+			"name": "size",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "size",
+			"order": 3
+		}
+	}
+}
