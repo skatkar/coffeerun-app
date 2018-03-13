@@ -20,7 +20,7 @@
 
   RemoteDataStore.prototype.getAll = function(cb) {
     $.get(this.serverUrl, function(serverResponse) {
-      console.log(serverResponse);
+      console.log("From getAll function : " + serverResponse);
       cb(serverResponse);
     });
   };
@@ -42,11 +42,16 @@
   RemoteDataStore.prototype.remove = function(key) {
     var serverUrl = this.serverUrl;
     this.get(key, function(serverResponse) {
-      var id = getId(key, serverResponse[0]["id"]);
 
-      $.ajax(serverUrl + "/" + id ,{
-        type: "DELETE"
-      });
+      if (serverResponse.length != 0) {
+        console.log("server resposne is :" + serverResponse)
+        var id = getId(key, serverResponse[0]["id"]);
+
+        $.ajax(serverUrl + "/" + id, {
+          type: "DELETE"
+        });
+      }
+
     });
   };
 
